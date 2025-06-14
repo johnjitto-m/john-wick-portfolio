@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Hire John Wick</title>
+  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body class="contact-page">
+  <div class="contact-container">
+    <h1>Hire John Wick</h1>
+    <p class="subtitle">Silent. Precise. Legendary.</p>
+
+    <form class="contact-form" action="#" method="POST" enctype="multipart/form-data">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="clientName">Your Name</label>
+          <input type="text" id="clientName" name="clientName" required>
+
+          <label for="email">Contact Email</label>
+          <input type="email" id="email" name="email" required>
+
+          <label for="targetName">Target Name</label>
+          <input type="text" id="targetName" name="targetName" required>
+
+          <label for="targetPhoto">Target Photo</label>
+          <input type="file" id="targetPhoto" name="targetPhoto" accept="image/*">
+
+          <label for="amount">Amount Offered</label>
+          <input type="number" id="amount" name="amount" placeholder="Ex: 500000" required>
+        </div>
+
+        <div class="form-group">
+          <label for="deadline">Deadline</label>
+          <input type="datetime-local" id="deadline" name="deadline">
+
+          <label for="method">Preferred Method</label>
+          <select id="method" name="method">
+            <option value="sniper">Sniper</option>
+            <option value="poison">Poison</option>
+            <option value="melee">Close Combat</option>
+            <option value="accident">Make it look like an accident</option>
+            <option value="your_choice">Leave it to the expert</option>
+          </select>
+
+          <label for="extras">Items to Retrieve</label>
+          <input type="text" id="extras" name="extras" placeholder="USB, phone, etc.">
+
+          <label for="message">Final Instructions</label>
+          <textarea id="message" name="message" rows="4" placeholder="Be clear..."></textarea>
+        </div>
+      </div>
+
+      <button type="submit" class="btn">Send Contract</button>
+    </form>
+  </div>
+  <!-- Thank You Modal -->
+<div id="thankYouModal" class="modal">
+  <div class="modal-content">
+    <h2>🎯 Contract Received</h2>
+    <p>Mr. Wick is on the move...</p>
+    <p>No further contact is necessary.</p>
+    <button onclick="closeModal()">Got it</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
