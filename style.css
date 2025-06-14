@@ -24,6 +24,19 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+.hero-name-link {
+  color: #e6b800;
+  text-decoration: none;
+  font-weight: bold;
+  border-bottom: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.hero-name-link:hover {
+  border-bottom: 2px solid #e6b800;
+  color: #fff;
+  cursor: pointer;
+}
 
 .text {
   flex: 1;
@@ -192,4 +205,66 @@ body {
 
 .modal-content button:hover {
   background: darkred;
+}
+
+/* About Page Styles */
+
+body.about-page {
+  background-color: #0d0d0d;
+  background-image: linear-gradient(145deg, #0d0d0d, #111111), url('https://www.transparenttextures.com/patterns/purty-wood.png');
+background-blend-mode: overlay;
+  color: #f2f2f2;
+  font-family: 'Georgia', serif;
+  padding: 40px 20px;
+  line-height: 1.6;
+}
+
+.about-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.about-title {
+  font-size: 48px;
+  color: #d4af37;
+  text-align: center;
+  margin-bottom: 10px;
+  font-family: 'Playfair Display', serif;
+}
+
+.about-subtitle {
+  text-align: center;
+  font-size: 18px;
+  color: #999;
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+.about-section {
+  display: grid;
+  gap: 30px;
+}
+
+.about-card {
+  background-color: #1a1a1a;
+  border-left: 5px solid #d4af37;
+  padding: 25px 30px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
+}
+
+.about-card h2 {
+  color: #d4af37;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.about-card ul {
+  list-style: disc inside;
+  margin-top: 10px;
+}
+
+.about-card li {
+  margin-bottom: 6px;
 }
