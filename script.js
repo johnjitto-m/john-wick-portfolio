@@ -1,3 +1,12 @@
+
+
+// Inject navbar.html into #navbar
+fetch("navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+  });
+
 const form = document.getElementById('contactForm');
 const modal = document.getElementById('thankYouModal');
 
@@ -30,3 +39,19 @@ form.addEventListener('submit', async (e) => {
 function closeModal() {
   modal.style.display = 'none';
 }
+
+// Highlight active nav link
+fetch("navbar.html")
+  .then(response => response.text())
+  .then(data => {
+    document.getElementById("navbar").innerHTML = data;
+
+    // Highlight current page link
+    const links = document.querySelectorAll(".navbar a");
+    links.forEach(link => {
+      if (link.getAttribute("href") === location.pathname.split("/").pop()) {
+        link.classList.add("active");
+      }
+    });
+  });
+
