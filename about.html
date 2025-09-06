@@ -2,11 +2,10 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About | John Wick</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | John Wick</title>
   <link rel="stylesheet" href="style.css">
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Continental_Hotel_Logo.png">
 </head>
 
 <body class="about-page">
@@ -24,40 +23,54 @@
     </div>
   </header>
 
-  <!-- Horizontal Slider Sections -->
-  <section class="about-slider">
-    <button class="slider-btn prev" onclick="slide(-1)">&#10094;</button>
-    <div class="slider-track">
-      <div class="slide">
-        <h2>Background</h2>
-        <p>Trained under The Continental’s highest order, my precision and skill are unmatched. Execution without error, motion without hesitation.</p>
-      </div>
-      <div class="slide">
-        <h2>Philosophy</h2>
-        <p>Every contract is a promise — honored with unwavering discipline. Chaos is not sought; balance is restored.</p>
-      </div>
-      <div class="slide">
-        <h2>Capabilities</h2>
-        <ul>
-          <li>Close-quarters precision combat</li>
-          <li>Stealth infiltration & neutralization</li>
-          <li>Multi-target synchronization</li>
-          <li>Asset recovery & extraction</li>
-          <li>Fluent in 7 languages — silence is strongest</li>
-        </ul>
-      </div>
-      <div class="slide">
-        <h2>Affiliations</h2>
-        <p>Occasionally honor select contracts through The Continental’s black ledger. All business remains off the record.</p>
-      </div>
-      <div class="slide">
-        <h2>Note</h2>
-        <p>I do not chase glory. I do not ask for trust. But if you’ve found this page… it means you’ve heard the stories. Most are true.</p>
-      </div>
-    </div>
-    <button class="slider-btn next" onclick="slide(1)">&#10095;</button>
-  </section>
+  
+    <!-- Creed Section (replaces the slider) -->
+    <section class="section">
+        <h2 class="section-title">A Man of Focus, Commitment, and Sheer Will</h2>
+        <div class="creed-grid">
+            <div class="creed-card">
+                <h3>Code of Conduct</h3>
+                <p>Every contract is a promise—a sacred, unbreakable vow. The business is cold, but the discipline is absolute. Honor is a currency more valuable than gold.</p>
+            </div>
+            <div class="creed-card">
+                <h3>Capabilities</h3>
+                <ul>
+                    <li>Close-quarters precision combat</li>
+                    <li>Unmatched stealth and infiltration</li>
+                    <li>Multi-target synchronization</li>
+                    <li>Asset recovery & extraction</li>
+                    <li>Fluent in 7 languages</li>
+                </ul>
+            </div>
+            <div class="creed-card">
+                <h3>Affiliations</h3>
+                <p>Formerly of the Russian crime syndicate. Now, an associate of the Continental, abiding by its rules. Business is strictly off the record.</p>
+            </div>
+        </div>
+    </section>
 
+        <!-- Missions Log Section -->
+    <section class="section">
+        <h2 class="section-title">The Legend</h2>
+        <div class="missions-grid">
+            <div class="mission-item">
+                <h3>The Rome Incident</h3>
+                <p>Location: Rome, Italy<br>Objective: Eliminate crime family leadership<br>Status: Success</p>
+            </div>
+            <div class="mission-item">
+                <h3>The Casablanca Gambit</h3>
+                <p>Location: Casablanca, Morocco<br>Objective: Retrieve a high-value asset<br>Status: Success with extreme prejudice</p>
+            </div>
+            <div class="mission-item">
+                <h3>The Final Reckoning</h3>
+                <p>Location: New York City<br>Objective: Settle a personal score<br>Status: The score is settled.</p>
+            </div>
+            <div class="mission-item">
+                <h3>The Tokyo Engagement</h3>
+                <p>Location: Tokyo, Japan<br>Objective: Facilitate a high-stakes transfer<br>Status: Untraceable</p>
+            </div>
+        </div>
+    </section>
   <script src="script.js" defer></script>
 </body>
 

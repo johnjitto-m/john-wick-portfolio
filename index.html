@@ -1,37 +1,66 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html lang="en">
- <div id="navbar"></div>  <!-- Navbar will be injected here -->
   <head>
-    <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Continental_Hotel_Logo.png" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>John Wick - Portfolio</title>
+    <title>Hire John Wick</title>
     <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   </head>
-  <body>
-    <div class="hero-about">
-      <div class="text">
-        <h1>
-          Hi, I'm
-          <a href="about.html" class="hero-name-link">John Wick</a>
-        </h1>
 
-        <h2>The Boogeyman. Assassin. Dog Lover.</h2>
-        <p>
-          A legendary hitman known for my precision, determination, and
-          unmatched skill set. After losing everything, I came back — and now,
-          I'm unstoppable. This is my world. Welcome to it.
-        </p>
-        <a href="contact.html" class="btn">Contact Me</a>
+
+  <body class="index-page">
+    <div id="navbar"></div> <!-- Navbar will be injected here -->
+
+        <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-bg" id="hero-bg"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hi, I'm John Wick</h1>
+            <h2>The Boogeyman. Assassin. Dog Lover.</h2>
+            <p>A retired legendary hitman forced back into the criminal underworld he had abandoned. His reputation for precision, unwavering resolve, and a near-supernatural skill set precedes him. This is my world. Welcome to it.</p>
+            <a href="contact.html" class="btn">Contact Me</a>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="section">
+      <h2 class="section-title">A Man of Focus, Commitment, and Sheer Will</h2>
+      <div class="about-grid">
+        <div class="about-image-container">
+          <img
+            src="https://wallpapers.com/images/high/neon-john-wick-5a5e1t8lfgff7d73.webp"
+            alt="John Wick with a serious expression"
+            class="about-image"
+          />
+        </div>
+        <div class="about-content">
+          <h3>My Code of Conduct</h3>
+          <p>
+            Every contract is a promise—a sacred, unbreakable vow. The business
+            is cold, but the discipline is absolute. Honor is a currency more
+            valuable than gold, and every debt must be paid in full.
+          </p>
+          <p>
+            I do not seek chaos, but I do not shy away from it. I am a restorer
+            of balance in a world that has lost its way. My actions are swift,
+            precise, and final.
+          </p>
+        </div>
       </div>
-      <div class="profile-pic">
-        <img
-          src="https://wallpapers.com/images/high/cool-keanu-reeves-as-john-wick-hd-hes1qaig59smaesg.webp"
-          alt="John Wick"
-        />
-      </div>
-    </div>
-    <script src="script.js" defer></script>
+    </section>
+    
+    <!-- Footer -->
+    <footer class="footer">
+      &copy; 2024 John Wick. All rights reserved. Managed by a professional.
+    </footer>
+
+    <script src="script.js" >
+      window.addEventListener("scroll", function () {
+        const parallaxBg = document.getElementById("hero-bg");
+        let offset = window.pageYOffset;
+        parallaxBg.style.transform = "translateY(" + offset * 0.5 + "px)";
+      });
+    </script>
   </body>
 </html>
