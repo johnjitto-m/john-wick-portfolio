@@ -1,60 +1,64 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About | John Wick</title>
-  <link rel="stylesheet" href="style.css" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Continental_Hotel_Logo.png" />
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="https://upload.wikimedia.org/wikipedia/commons/9/9e/Continental_Hotel_Logo.png">
 </head>
+
 <body class="about-page">
-  <div id="navbar"></div>  <!-- Navbar will be injected here -->
-  <div class="about-container">
-    <h1 class="about-title">Profile</h1>
-    <p class="about-subtitle">“If you have to ask who he is... you’re not ready.”</p>
+  <div id="navbar"></div> <!-- Navbar injected -->
 
-    <section class="about-section">
-      <div class="about-card">
+  <!-- Hero Section -->
+  <header class="about-hero">
+    <div class="about-hero-text">
+      <h1>John Wick</h1>
+      <p class="hero-subtitle">“If you have to ask who he is… you’re not ready.”</p>
+    </div>
+    <div class="about-hero-img">
+      <img src="https://wallpapers.com/images/high/cool-keanu-reeves-as-john-wick-hd-hes1qaig59smaesg.webp"
+        alt="John Wick">
+    </div>
+  </header>
+
+  <!-- Horizontal Slider Sections -->
+  <section class="about-slider">
+    <button class="slider-btn prev" onclick="slide(-1)">&#10094;</button>
+    <div class="slider-track">
+      <div class="slide">
         <h2>Background</h2>
-        <p>
-          I am not defined by a resume or a LinkedIn profile. My work speaks through precision, silence, and results.
-          Trained under the highest order of The Continental, my skills have been refined to perfection — execution without error, motion without hesitation.
-        </p>
+        <p>Trained under The Continental’s highest order, my precision and skill are unmatched. Execution without error, motion without hesitation.</p>
       </div>
-
-      <div class="about-card">
+      <div class="slide">
         <h2>Philosophy</h2>
-        <p>
-          Every contract is a promise — one I honor with unwavering discipline. I don’t seek chaos; I restore balance. Those who violate sacred codes… I remind them why rules exist.
-        </p>
+        <p>Every contract is a promise — honored with unwavering discipline. Chaos is not sought; balance is restored.</p>
       </div>
-
-      <div class="about-card">
+      <div class="slide">
         <h2>Capabilities</h2>
         <ul>
           <li>Close-quarters precision combat</li>
           <li>Stealth infiltration & neutralization</li>
           <li>Multi-target synchronization</li>
-          <li>Asset recovery and evidence extraction</li>
-          <li>Fluent in 7 languages — silence being the strongest</li>
+          <li>Asset recovery & extraction</li>
+          <li>Fluent in 7 languages — silence is strongest</li>
         </ul>
       </div>
-
-      <div class="about-card">
+      <div class="slide">
         <h2>Affiliations</h2>
-        <p>
-          I owe no allegiance — except to the code. Occasionally, I honor select contracts through The Continental's black ledger. All business remains off the record.
-        </p>
+        <p>Occasionally honor select contracts through The Continental’s black ledger. All business remains off the record.</p>
       </div>
-
-      <div class="about-card">
+      <div class="slide">
         <h2>Note</h2>
-        <p>
-          I do not chase glory. I do not ask for trust. But if you’ve found this page... it means you’ve heard the stories. Most are true.
-        </p>
+        <p>I do not chase glory. I do not ask for trust. But if you’ve found this page… it means you’ve heard the stories. Most are true.</p>
       </div>
-    </section>
-  </div>
+    </div>
+    <button class="slider-btn next" onclick="slide(1)">&#10095;</button>
+  </section>
+
   <script src="script.js" defer></script>
 </body>
+
 </html>

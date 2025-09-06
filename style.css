@@ -83,7 +83,8 @@ body {
 
 .nav-links a.active::after {
   width: 100%;
-  background: #d4af37; /* gold underline */
+  background: #d4af37;
+  /* gold underline */
 }
 
 
@@ -92,7 +93,8 @@ body {
 /* Overlay container */
 .hero-about {
   display: flex;
-  background-color: rgba(0, 0, 0, 0.85); /* dark overlay */
+  background-color: rgba(0, 0, 0, 0.85);
+  /* dark overlay */
   color: #fff;
   min-height: 100vh;
   padding: 40px;
@@ -101,6 +103,7 @@ body {
   justify-content: center;
   flex-wrap: wrap;
 }
+
 .hero-name-link {
   color: #e6b800;
   text-decoration: none;
@@ -161,6 +164,7 @@ body {
   border-radius: 10px;
   border: 3px solid #ff2c2c;
 }
+
 
 /* Contact Page Styling */
 .contact-page {
@@ -246,9 +250,11 @@ body {
   display: none;
   position: fixed;
   z-index: 100;
-  left: 0; top: 0;
-  width: 100%; height: 100%;
-  background-color: rgba(0,0,0,0.8);
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
   justify-content: center;
   align-items: center;
 }
@@ -284,64 +290,160 @@ body {
   background: darkred;
 }
 
-/* About Page Styles */
 
+/* About Page Horizontal Slider Styles */
 body.about-page {
-  background-color: #0d0d0d;
-  background-image: linear-gradient(145deg, #0d0d0d, #111111), url('https://www.transparenttextures.com/patterns/purty-wood.png');
-background-blend-mode: overlay;
+  background: linear-gradient(135deg, #0a0a0a, #111111);
   color: #f2f2f2;
   font-family: 'Georgia', serif;
-  padding: 40px 20px;
-  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-.about-container {
-  max-width: 900px;
-  margin: 0 auto;
-  padding: 20px;
+/* Hero Section */
+.about-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  gap: 40px;
+  background: rgba(0,0,0,0.9) url('https://wallpapers.com/images/high/cool-keanu-reeves-as-john-wick-hd-hes1qaig59smaesg.webp') center/cover no-repeat;
+  position: relative;
 }
 
-.about-title {
-  font-size: 48px;
+.about-hero::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.about-hero-text {
+  flex: 1;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
   color: #d4af37;
-  text-align: center;
-  margin-bottom: 10px;
-  font-family: 'Playfair Display', serif;
 }
 
-.about-subtitle {
-  text-align: center;
-  font-size: 18px;
-  color: #999;
+.about-hero-text h1 {
+  font-size: 4rem;
+  margin-bottom: 10px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
   font-style: italic;
-  margin-bottom: 40px;
+  color: #ccc;
 }
 
-.about-section {
-  display: grid;
-  gap: 30px;
+.about-hero-img {
+  flex: 1;
+  max-width: 400px;
+  position: relative;
+  z-index: 1;
 }
 
-.about-card {
-  background-color: #1a1a1a;
+.about-hero-img img {
+  width: 100%;
+  border-radius: 12px;
+  border: 3px solid #d4af37;
+  box-shadow: 0 0 30px rgba(212, 175, 55, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.about-hero-img img:hover {
+  transform: scale(1.05);
+}
+
+/* Slider Section */
+.about-slider {
+  position: relative;
+  margin: 60px auto;
+  max-width: 1000px;
+  overflow: hidden;
+}
+
+.slider-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.slide {
+  flex: 0 0 100%;
+  padding: 40px;
+  background: #1a1a1a;
+  margin: 0 10px;
+  border-radius: 12px;
   border-left: 5px solid #d4af37;
-  padding: 25px 30px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
-  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  min-height: 250px;
 }
 
-.about-card h2 {
+.slide h2 {
+  font-size: 2rem;
   color: #d4af37;
-  margin-bottom: 10px;
-  font-size: 24px;
+  margin-bottom: 15px;
 }
 
-.about-card ul {
-  list-style: disc inside;
-  margin-top: 10px;
+.slide p, .slide ul {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #ccc;
 }
 
-.about-card li {
-  margin-bottom: 6px;
+.slide ul li {
+  margin-bottom: 8px;
+}
+
+/* Slider Buttons */
+.slider-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(212, 175, 55, 0.8);
+  border: none;
+  padding: 12px 18px;
+  font-size: 2rem;
+  color: #111;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: 2;
+  transition: background 0.3s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(212, 175, 55, 1);
+}
+
+.slider-btn.prev {
+  left: 10px;
+}
+
+.slider-btn.next {
+  right: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .about-hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .about-hero-img {
+    max-width: 80%;
+  }
+
+  .slide {
+    padding: 30px 20px;
+  }
+
+  .slider-btn {
+    font-size: 1.5rem;
+    padding: 10px 14px;
+  }
 }
